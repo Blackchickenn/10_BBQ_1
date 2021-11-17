@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -42,13 +45,14 @@ h2{
     text-transform: uppercase;
 }
 .under-title{
-    font-size: 1.1rem;
+    font-size: 1.1rem; 
     font-weight: 900;
     text-transform: uppercase;
     margin: 0 0 1em 0;
 }
 .no-info{
     font-size: 0.625rem;
+    letter-spacing: 1px;
 }
 .main-text{
     margin-top: 0;
@@ -63,6 +67,7 @@ body{
     margin: 0 auto;
 }
 .first-section{
+    background-color: #404040;
     background-image: url(/Scrimba/CSS/10_BBQ/images/dark-ribs.jpg);
     background-position: center;
     background-size: cover;
@@ -105,4 +110,26 @@ body{
     margin: 0 auto;
 }
 
-
+/* ======MEDIA QUERY======= */
+@media (min-width:600px){
+    body{
+        font-size: 1.125rem;
+        display: flex;
+    }
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    .first-section, .second-section{
+        width: 50%;
+        min-height: 100vh;
+    }
+    .second-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
