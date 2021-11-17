@@ -35,6 +35,7 @@ h2{
     font-weight: bold;
     letter-spacing: 2px;
     border-top: #f18119 8px solid;
+    border-image: linear-gradient(to left, #ff713B, #ffa51d) 1;
     display: inline-block;
     padding-top: 8px;
     margin-top: 0;
@@ -68,7 +69,9 @@ body{
 }
 .first-section{
     background-color: #404040;
-    background-image: url(/Scrimba/CSS/10_BBQ/images/dark-ribs.jpg);
+    background-image: url(/Scrimba/CSS/10_BBQ/images/ribs.jpg);
+    /* ======improving image========= */
+    background-blend-mode: multiply; 
     background-position: center;
     background-size: cover;
     height: 45vh;
@@ -82,27 +85,52 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+/* taking all childs under class */
+.first-section > *,                    
+.second-section > * {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .contact-form{
     display: flex;
     flex-direction: column;
     width: 70%;
+    max-width: 300px;
     margin: 0 auto;
 }
 .first-name, .email, .registerbtn{
-    margin: 1em;
+    margin-bottom: 1em;
     padding: 1em;
-    text-align: center;
+    text-align: inherit;
+    font-family: inherit;
     border-radius: 10px;
     border: 1px solid grey;
+    width: 100%;
 }
+.first-name, .email{
+    transition: transform 250ms;
+    transform: scale(1);
+}
+.first-name:focus,
+.email:focus{
+    transform: scale(1.1);
+}
+
 .registerbtn{
     cursor: pointer;
     background-image: linear-gradient(#ff713B, #ffa51d );
-    border: none;
+    border: 0;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: all 250ms;
+    transform: scale(1);
+}
+.registerbtn:hover,
+.registerbtn:focus{
+    transform: scale(1.1);
 }
 .no-info{
     color: rgba(64, 64, 64, 0.6);

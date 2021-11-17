@@ -15,17 +15,18 @@
         <p class="bottom-title">Join us for this live webinar</p>
     </section>
 
-    <section class="second-section">
+    <section id="Main-Content" class="second-section">
         <h2>Become a BBQ master! </h2>
         <p class="under-title">Register Today</p>
         <p class="main-text">BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
-        <div class="contact-form">
-            <input type="text" class="first-name" name="firstname" placeholder="First name">
-            <input type="text" placeholder="Email" name="email" class="email" required>
-            <input type="submit" class="registerbtn" value="Register">
-        </div>
+            <form id="contact-form" class="contact-form" action="#" method="post">
+                <input name="firstName" class="first-name" type="text" required placeholder="first name">
+                <input name="emailAddress" class="email" type="email" required placeholder="email">
+                <button class="registerbtn btn-primary" type="submit" >Register</button>
+            </form>
         <p class="no-info">We'll never share your information without your permission</p>
     </section>
+    <script src="/Scrimba/CSS/10_BBQ/main.js"></script>
 </body>
 </html>
 
